@@ -24,8 +24,10 @@ $slim->get('/', function(){
     echo $html;
 });
 
-$slim->get('', function(){
-    
+$slim->get('/Groupe', function(){
+    $c = new GroupeController();
+    $html = $c->créerGroupe();
+    echo $html;
 });
 
 $slim->run();
