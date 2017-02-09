@@ -1,8 +1,8 @@
 <?php
 
-namespace Vue;
+namespace appli\vue;
 
-class Index {
+class IndexLogement {
     
     public function afficher(){
         $html = '<!DOCTYPE html>
@@ -268,56 +268,56 @@ class Index {
 									<div class="item">
 								  		<div class="testimonials-post">
 								  			<span class="fa fa-quote-left"></span>
-								  			<p>‚Äú At vero eos et accusamus et iusto odio dignissimos ducimus qui molestias excepturi blanditis ‚Äù</p>
+								  			<p>ì At vero eos et accusamus et iusto odio dignissimos ducimus qui molestias excepturi blanditis î</p>
 								  			<h6>Ramshad Imeri - <em>India,Malappura</em></h6>
 								  		</div>
 								    </div>
 								    <div class="item">
 								  		<div class="testimonials-post">
 								  			<span class="fa fa-quote-left"></span>
-								  			<p>‚Äú At vero eos et accusamus et iusto odio dignissimos ducimus qui molestias excepturi blanditis ‚Äù</p>
+								  			<p>ì At vero eos et accusamus et iusto odio dignissimos ducimus qui molestias excepturi blanditis î</p>
 								  			<h6>Akhil Luis - <em>India, Calicut</em></h6>
 								  		</div>
 								    </div>
 								    <div class="item">
 								  		<div class="testimonials-post">
 								  			<span class="fa fa-quote-left"></span>
-								  			<p>‚Äú At vero eos et accusamus et iusto odio dignissimos ducimus qui molestias excepturi blanditis ‚Äù</p>
+								  			<p>ì At vero eos et accusamus et iusto odio dignissimos ducimus qui molestias excepturi blanditis î</p>
 								  			<h6>Ramkumar - <em>Munnar, Kerala</em></h6>
 								  		</div>
 								    </div>
 								    <div class="item">
 								  		<div class="testimonials-post">
 								  			<span class="fa fa-quote-left"></span>
-								  			<p>‚Äú At vero eos et accusamus et iusto odio dignissimos ducimus qui molestias excepturi blanditis ‚Äù</p>
+								  			<p>ì At vero eos et accusamus et iusto odio dignissimos ducimus qui molestias excepturi blanditis î</p>
 								  			<h6>Sajit OB - <em>Berlin, Germany</em></h6>
 								  		</div>
 								    </div>
 								    <div class="item">
 								  		<div class="testimonials-post">
 								  			<span class="fa fa-quote-left"></span>
-								  			<p>‚Äú At vero eos et accusamus et iusto odio dignissimos ducimus qui molestias excepturi blanditis ‚Äù</p>
+								  			<p>ì At vero eos et accusamus et iusto odio dignissimos ducimus qui molestias excepturi blanditis î</p>
 								  			<h6>Anithamol Benny - <em>Thodupuzha, Kottayam</em></h6>
 								  		</div>
 								    </div>
 								    <div class="item">
 								  		<div class="testimonials-post">
 								  			<span class="fa fa-quote-left"></span>
-								  			<p>‚Äú At vero eos et accusamus et iusto odio dignissimos ducimus qui molestias excepturi blanditis ‚Äù</p>
+								  			<p>ì At vero eos et accusamus et iusto odio dignissimos ducimus qui molestias excepturi blanditis î</p>
 								  			<h6>Sreejith Rajan - <em>India, Alappuzha</em></h6>
 								  		</div>
 								    </div>
 								    <div class="item">
 								  		<div class="testimonials-post">
 								  			<span class="fa fa-quote-left"></span>
-								  			<p>‚Äú At vero eos et accusamus et iusto odio dignissimos ducimus qui molestias excepturi blanditis ‚Äù</p>
+								  			<p>ì At vero eos et accusamus et iusto odio dignissimos ducimus qui molestias excepturi blanditis î</p>
 								  			<h6>Aneeshkumar - <em>Kakkanad ,Cochin</em></h6>
 								  		</div>
 								    </div>
 								    <div class="item">
 								  		<div class="testimonials-post">
 								  			<span class="fa fa-quote-left"></span>
-								  			<p>‚Äú At vero eos et accusamus et iusto odio dignissimos ducimus qui molestias excepturi blanditis ‚Äù</p>
+								  			<p>ì At vero eos et accusamus et iusto odio dignissimos ducimus qui molestias excepturi blanditis î</p>
 								  			<h6>Rohit Sarma - <em>Gurgaon, India</em></h6>
 								  		</div>
 								    </div>
@@ -387,7 +387,7 @@ class Index {
              YOM
             </a>
           </h1>
-          <p>¬©2015 Yom. All rights reserved.</p>
+          <p>©2015 Yom. All rights reserved.</p>
           <div class="spacing"></div>
           <ul class="socials">
             <li>
