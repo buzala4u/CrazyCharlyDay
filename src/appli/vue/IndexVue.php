@@ -19,12 +19,12 @@ class IndexVue {
 	<link href=\'http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,800\' rel=\'stylesheet\' type=\'text/css\'>
 	<link href=\'http://fonts.googleapis.com/css?family=Audiowide\' rel=\'stylesheet\' type=\'text/css\'>
 
-	<link rel="stylesheet" href="files/css/bootstrap.css">
-	<link rel="stylesheet" href="files/css/animate.css">
-	<link rel="stylesheet" href="files/css/simple-line-icons.css">
-	<link rel="stylesheet" href="files/css/font-awesome.min.css">
-	<link rel="stylesheet" href="files/css/style.css">
-	<link rel="stylesheet" href="files/rs-plugin/css/settings.css">
+	<link rel="stylesheet" href="src/appli/vue/files/css/bootstrap.css">
+	<link rel="stylesheet" href="src/appli/vue/files/css/animate.css">
+	<link rel="stylesheet" href="src/appli/vue/files/css/simple-line-icons.css">
+	<link rel="stylesheet" href="src/appli/vue/files/css/font-awesome.min.css">
+	<link rel="stylesheet" href="src/appli/vue/files/css/style.css">
+	<link rel="stylesheet" href="src/appli/vue/files/rs-plugin/css/settings.css">
     
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
