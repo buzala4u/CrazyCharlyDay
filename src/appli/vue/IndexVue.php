@@ -88,19 +88,19 @@ class IndexVue {
 						<div class="fullwidthbanner">
 							<ul>
 								<li class="first-slide" data-transition="fade" data-slotamount="10" data-masterspeed="300">
-									<img src="files/images/01-slide.jpg" data-fullwidthcentering="on" alt="slide">
+									<img src="src/appli/vue/files/images/01-slide.jpg" data-fullwidthcentering="on" alt="slide">
 									<div class="tp-caption first-line lft tp-resizeme start" data-x="center" data-hoffset="0" data-y="250" data-speed="1000" data-start="200" data-easing="Power4.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0">YOM-DOWNLOAD ANYTHING</div>
 									<div class="tp-caption second-line lfb tp-resizeme start" data-x="center" data-hoffset="0" data-y="340" data-speed="1000" data-start="800" data-easing="Power4.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0">From Yom you can download anything for free</div>
 									<div class="tp-caption slider-btn sfb tp-resizeme start" data-x="center" data-hoffset="0" data-y="510" data-speed="1000" data-start="2200" data-easing="Power4.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0"><a href="#" class="btn btn-slider">Discover More</a></div>
 								</li>
 								<li class="first-slide" data-transition="fade" data-slotamount="10" data-masterspeed="300">
-									<img src="files/images/02-slide.jpg" data-fullwidthcentering="on" alt="slide">
+									<img src="src/appli/vue/files/images/02-slide.jpg" data-fullwidthcentering="on" alt="slide">
 									<div class="tp-caption first-line lft tp-resizeme start" data-x="center" data-hoffset="0" data-y="250" data-speed="1000" data-start="200" data-easing="Power4.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0">Create a Multi Author Blog</div>
 									<div class="tp-caption second-line lfb tp-resizeme start" data-x="center" data-hoffset="0" data-y="340" data-speed="1000" data-start="800" data-easing="Power4.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0">Using Yom you can create multi author Blog platform</div>
 									<div class="tp-caption slider-btn sfb tp-resizeme start" data-x="center" data-hoffset="0" data-y="510" data-speed="1000" data-start="2200" data-easing="Power4.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0"><a href="#" class=" second-btn btn btn-slider">Discover More</a></div>
 								</li>
 								<li class="first-slide" data-transition="fade" data-slotamount="10" data-masterspeed="300">
-									<img src="files/images/03-slide.jpg" data-fullwidthcentering="on" alt="slide">
+									<img src="src/appli/vue/files/images/03-slide.jpg" data-fullwidthcentering="on" alt="slide">
 									<div class="tp-caption first-line lft tp-resizeme start" data-x="center" data-hoffset="0" data-y="250" data-speed="1000" data-start="200" data-easing="Power4.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0">Create an E-commerce Site</div>
 									<div class="tp-caption second-line lfb tp-resizeme start" data-x="center" data-hoffset="0" data-y="340" data-speed="1000" data-start="800" data-easing="Power4.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0">Using Yom your can create a Multi Author E-Commerce Website</div>
 									<div class="tp-caption slider-btn sfb tp-resizeme start" data-x="center" data-hoffset="0" data-y="510" data-speed="1000" data-start="2200" data-easing="Power4.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0"><a href="#" class="btn btn-slider">Discover More</a></div>
@@ -174,7 +174,7 @@ class IndexVue {
 								<div id="owl-portfolio" class="owl-carousel owl-theme">
 									<div class="item">
 								  		<figure>
-				        					<img alt="portfolio" src="files/images/01-portfolio.jpg">
+				        					<img alt="portfolio" src="src/appli/vue/files/images/01-portfolio.jpg">
 				        					<figcaption>
 				            					<h3>Plaid Authentic</h3>
 				            					<p>Lorem ipsum dolor sit amet consectetur.</p>
@@ -183,7 +183,7 @@ class IndexVue {
 				    				</div>
 								    <div class="item">
 								  		<figure>
-				        					<img alt="portfolio" src="files/images/02-portfolio.jpg">
+				        					<img alt="portfolio" src="src/appli/vue/files/images/02-portfolio.jpg">
 				        					<figcaption>
 				            					<h3>Portland Neutra</h3>
 				            					<p>Lorem ipsum dolor sit amet consectetur.</p>
@@ -192,7 +192,7 @@ class IndexVue {
 				    				</div>
 								    <div class="item">
 								  		<figure>
-				        					<img alt="portfolio" src="files/images/03-portfolio.jpg">
+				        					<img alt="portfolio" src="src/appli/vue/files/images/03-portfolio.jpg">
 				        					<figcaption>
 				            					<h3>Synth Thundercats</h3>
 				            					<p>Lorem ipsum dolor sit amet consectetur.</p>
@@ -201,7 +201,7 @@ class IndexVue {
 				    				</div>
 								    <div class="item">
 								  		<figure>
-				        					<img alt="portfolio" src="files/images/04-portfolio.jpg">
+				        					<img alt="portfolio" src="src/appli/vue/files/images/04-portfolio.jpg">
 				        					<figcaption>
 				            					<h3>Bushwick Letterpress</h3>
 				            					<p>Lorem ipsum dolor sit amet consectetur.</p>
@@ -210,7 +210,7 @@ class IndexVue {
 				    				</div>
 				    				<div class="item">
 								  		<figure>
-				        					<img alt="portfolio" src="files/images/05-portfolio.jpg">
+				        					<img alt="portfolio" src="src/appli/vue/files/images/05-portfolio.jpg">
 				        					<figcaption>
 				            					<h3>Fashion Heirloom</h3>
 				            					<p>Lorem ipsum dolor sit amet consectetur.</p>
@@ -219,7 +219,7 @@ class IndexVue {
 				    				</div>
 								    <div class="item">
 								  		<figure>
-				        					<img alt="portfolio" src="files/images/06-portfolio.jpg">
+				        					<img alt="portfolio" src="src/appli/vue/files/images/06-portfolio.jpg">
 				        					<figcaption>
 				            					<h3>Locavore Brooklyn</h3>
 				            					<p>Lorem ipsum dolor sit amet consectetur.</p>
@@ -228,7 +228,7 @@ class IndexVue {
 				    				</div>
 				    				<div class="item">
 								  		<figure>
-				        					<img alt="portfolio" src="files/images/07-portfolio.jpg">
+				        					<img alt="portfolio" src="src/appli/vue/files/images/07-portfolio.jpg">
 				        					<figcaption>
 				            					<h3>Meggings Mixtape</h3>
 				            					<p>Lorem ipsum dolor sit amet consectetur.</p>
@@ -237,7 +237,7 @@ class IndexVue {
 				    				</div>
 								    <div class="item">
 								  		<figure>
-				        					<img alt="portfolio" src="files/images/08-portfolio.jpg">
+				        					<img alt="portfolio" src="src/appli/vue/files/images/08-portfolio.jpg">
 				        					<figcaption>
 				            					<h3>Normcore Dreamcatcher</h3>
 				            					<p>Lorem ipsum dolor sit amet consectetur.</p>
@@ -343,7 +343,7 @@ class IndexVue {
 						</div>
 						<div class="blog-item">
 							<div class="col-md-4">
-								<a href="blog-single.html"><img src="files/images/01-blog.jpg" alt=""></a>
+								<a href="blog-single.html"><img src="src/appli/vue/files/images/01-blog.jpg" alt=""></a>
 								<h3><a href="blog-single.html">Lorum Ipsum5</a></h3>
 								<span><a href="#">Syam Kesav</a> / <a href="#">6 June 2015</a> / <a href="#">Uncategorized</a></span>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit alis quam est leo, imperdiet eget dictum sed, congue non erosa senean sed ligula hendrerit...</p>
@@ -354,7 +354,7 @@ class IndexVue {
 						</div>
 						<div class="blog-item">
 							<div class="col-md-4">
-								<a href="blog-single.html"><img src="files/images/02-blog.jpg" alt=""></a>
+								<a href="blog-single.html"><img src="src/appli/vue/files/images/02-blog.jpg" alt=""></a>
 								<h3><a href="blog-single.html">Lorum Ipsum5</a></h3>
 								<span><a href="#">Manohar Raj</a> / <a href="#">6 June 2015</a> / <a href="#">Uncategorized</a></span>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit alis quam est leo, imperdiet eget dictum sed, congue non erosa senean sed ligula hendrerit...</p>
@@ -365,7 +365,7 @@ class IndexVue {
 						</div>
 						<div class="blog-item">
 							<div class="col-md-4">
-								<a href="blog-single.html"><img src="files/images/03-blog.jpg" alt=""></a>
+								<a href="blog-single.html"><img src="src/appli/vue/files/images/03-blog.jpg" alt=""></a>
 								<h3><a href="blog-single.html">Lorum Ipsum5</a></h3>
 								<span><a href="#">George Yeti</a> / <a href="#">6 June 2015</a> / <a href="#">Uncategorized</a></span>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit alis quam est leo, imperdiet eget dictum sed, congue non erosa senean sed ligula hendrerit...</p>
