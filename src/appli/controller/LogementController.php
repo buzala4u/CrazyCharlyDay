@@ -3,7 +3,8 @@
 namespace appli\controller;
 use appli\vue\VueLogement as VueLogement;
 
-class IndexLogement {
+class LogementController {
+    
     public function affichIndex(){
         $v = new VueLogement();
         $html = $v->afficher();

@@ -23,13 +23,13 @@ $slim->get('/', function(){
     echo $html;
 });
 
-$slim->get('/Index.php/UtilController/listeUtilisateur', function(){
+$slim->get('UtilController/listeUtilisateurr', function(){
     $c = new Utilisateur();
     $html = $c->affichListeUtil();
     echo $html;
 });
 
-$slim->get('/Index.php/UtilController/utilisateur/$id', function($id){
+$slim->get('UtilController/utilisateur/$id', function($id){
    $c = new Utilisateur();
     $html = $c->affichUtil($id);
     echo $html;
