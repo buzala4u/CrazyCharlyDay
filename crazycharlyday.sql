@@ -27,11 +27,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `groupe` (
-  `idGroupe` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
+  `idAdmin` int(11) NOT NULL,
   `valide` tinyint(1) NOT NULL,
-  `listeUtil` varchar(150) NOT NULL,
-  `idLogement` int(11) NOT NULL,
-  `listeInvitations` varchar(50) NOT NULL
+  `idLogement` int(11),
+  `description` varchar(150) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -42,7 +42,9 @@ CREATE TABLE `groupe` (
 
 CREATE TABLE `invitation` (
   `URL` varchar(50) NOT NULL,
-  `idGroupe` int(11) NOT NULL
+  `idGroupe` int(11) NOT NULL,
+  `idUser` int(11) NOT NULL,
+  `accepter` tinyint(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -52,9 +54,9 @@ CREATE TABLE `invitation` (
 --
 
 CREATE TABLE `logement` (
-  `idLogement` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `photo` varchar(50) NOT NULL,
-  `places` int(11) NOT NULL
+  `nbPlaces` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -68,8 +70,7 @@ CREATE TABLE `user` (
   `nom` varchar(30) NOT NULL,
   `mail` varchar(50) NOT NULL,
   `message` text NOT NULL,
-  `photo` varchar(50) NOT NULL,
-  `idGroupe` int(11) NOT NULL
+  `photo` varchar(50) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -81,18 +82,27 @@ CREATE TABLE `user` (
 --
 ALTER TABLE `groupe`
   ADD PRIMARY KEY (`idGroupe`);
+ALTER TABLE `groupe`
+  ADD CONSTRAINT fk_groupeUser FOREIGN KEY (`idAdmin`) REFERENCES `user`(`id`);
+ALTER TABLE `groupe`
+  ADD CONSTRAINT fk_groupeLogement FOREIGN KEY (`idLogement`) REFERENCES `Logement`(`id`);
+
 
 --
 -- Index pour la table `invitation`
 --
 ALTER TABLE `invitation`
   ADD PRIMARY KEY (`URL`);
+ALTER TABLE `invitation`
+  ADD CONSTRAINT fk_invitationUser FOREIGN KEY (`idUser`) REFERENCES `user`(`id`);
+ALTER TABLE `invitation`
+  ADD CONSTRAINT fk_invitationGroupe FOREIGN KEY (`idGroupe`) REFERENCES `groupe`(`idGroupe`);
 
 --
 -- Index pour la table `logement`
 --
 ALTER TABLE `logement`
-  ADD PRIMARY KEY (`idLogement`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `user`

@@ -1,13 +1,17 @@
 <?php
 
 namespace appli\controller;
-use appli\vue\IndexVue as IndexVue;
+use appli\vue\GroupeVue as GroupeVue;
 
-class IndexController {
+class GroupeController {
     
-    public function affichIndex(){
-        $v = new IndexVue();
-        $html = $v->afficher();
+    public function creerGroupe(){
+        //Modofier base
+    }
+    
+    public function afficheDetailGroupe($id){
+        $v = new UtilVue();
+        $html = $v->choixAffichage(2, $id);
         return $html;
     }
 }
