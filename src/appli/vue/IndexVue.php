@@ -50,7 +50,7 @@ class IndexVue {
 					<div id="main-header" class="main-header header-sticky">
 						<div class="inner-header clearfix">
 							<div class="logo">
-								<a href="index-2.html">CSE</a>
+								<a href="index-2.html">Un Toit Pour Tous</a>
 							</div>
 							<div class="header-right-toggle pull-right hidden-md hidden-lg">
 								<a href="javascript:void(0)" class="side-menu-button"><i class="fa fa-bars"></i></a>
@@ -58,27 +58,9 @@ class IndexVue {
 							<nav class="main-navigation pull-right hidden-xs hidden-sm">
 								<ul>
 									<li><a href="">Acceuil</a></li>
-									<li><a href="#" class="has-submenu">Pages</a>
-										<ul class="sub-menu">
-											<li><a href="services.html">Services</a></li>
-											<li><a href="clients.html">Clients</a></li>
-										</ul>
-									</li>
-									<li><a href="#" class="has-submenu">Blog</a>
-										<ul class="sub-menu">
-											<li><a href="blog.html">Blog Classic</a></li>
-											<li><a href="blog-grid.html">Blog Grid</a></li>
-											<li><a href="blog-single.html">Single Post</a></li>
-										</ul>
-									</li>
-									<li><a href="about.html">About</a></li>
-									<li><a href="#" class="has-submenu">Work</a>
-										<ul class="sub-menu">
-											<li><a href="work-3columns.html">Three Columns</a></li>
-											<li><a href="work-4columns.html">Four Columns</a></li>
-											<li><a href="single-project.html">Single Project</a></li>
-										</ul>
-									</li>
+									<li><a href="#">Liste des logements</a></li>
+									<li><a href="about.html">Se connecter</a></li>
+									<li><a href="about.html">S\'inscrire</a></li>
 									<li><a href="contact.html">Contact</a></li>
 								</ul>
 							</nav>
@@ -114,8 +96,12 @@ class IndexVue {
 				
 				<section class="call-to-action-1">
 					<div class="container">
-						<h4>Un site ou vous pourrez trouver votre bonheur !</h4>
-    <p class="col-md-10 col-md-offset-1">Trouvez un colocataire parmis un grand choix de personnes prêtes à faire le grand saut avec vous.</p>
+						<h1>Un toit partagé</h1>
+							<h4>Colocationseniors.fr est un site de l’association Un toit partagé.</h4>
+    							<p class="col-md-10 col-md-offset-1">La création d’Un toit partagé s’est faite à la suite d’une étude réalisée en 2012 
+    							sur l’habitat partagé pour les plus de 55 ans. Nous y avons vu l’opportunité de développer la colocation entre seniors. 
+    							Mais pas n’importe comment ! Avec des valeurs et une relation humaine. C’est pourquoi Un toit partagé est une association 
+    							à but non lucratif qui regroupe aussi les acteurs locaux tels que des collectivités, des associations , etc.</p>
 					</div>	
 				</section>
 				
@@ -123,7 +109,7 @@ class IndexVue {
 				<section class="portfolio">
 					<div class="container">
 						<div class="section-heading-white">
-							<h2>Nos logements</h2>
+							<h2>Aperçu de nos logements</h2>
 							<div class="section-dec"></div>
 						</div>
 						<div class="row">
