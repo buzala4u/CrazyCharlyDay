@@ -46,6 +46,6 @@ $slim->get('LogementController/listeLogement', function(){
     $c = new GroupeController();
     $html = $c->afficheListeLog();
     echo $html;
-})
+});
 
 $slim->run();
