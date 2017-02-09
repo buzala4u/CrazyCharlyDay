@@ -4,29 +4,40 @@
 * Programme principal de l'application web
 */
 
-
-//on lance l'autoload
 require_once 'vendor/autoload.php';
-
 use Illuminate\Database\Capsule\Manager as DB;
+use appli\controller\IndexController as Index;
+use appli\controller\UtilisateurController as Utilisateur;
 
 //creation de la connexion
 $db = new DB();
-$tab = parse_ini_file('src/conf/conf.ini');
+$tab = parse_ini_file('src/ini/conf.ini');
 $db->addConnection($tab);
 $db->setAsGlobal();
 $db->bootEloquent();
 $slim = new \Slim\Slim();
 
 $slim->get('/', function(){
-    $c = new IndexController();
+    $c = new Index();
     $html = $c->affichIndex();
     echo $html;
 });
 
-$slim->get('/Groupe', function(){
+$slim->get('/Index.php/UtilController/groupe', function(){
     $c = new GroupeController();
     $html = $c->créerGroupe();
+	echo $html
+});
+
+$slim->get('/Index.php/UtilController/listeUtilisateur', function(){
+    $c = new Utilisateur();
+    $html = $c->affichListeUtil();
+    echo $html;
+});
+
+$slim->get('/Index.php/UtilController/utilisateur/$id', function($id){
+   $c = new Utilisateur();
+    $html = $c->affichUtil($id);
     echo $html;
 });
 
