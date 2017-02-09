@@ -1,7 +1,7 @@
 <?php
 
 namespace appli\vue;
-
+use appli\model\Utilisateur as Utilisateur;
 class UtilisateurVue {
     
     private $html = '';
@@ -15,26 +15,30 @@ class UtilisateurVue {
                 $text = descrUtil($id);
             break;
         }
-        render($html);
+        render($text);
     }
+    
     
     public function listeUtil(){
         $tab = Utilisateur::get();
         $page = '';
         $i = 1;
         foreach($this->tab as $util){
-            $page = $page. '<li><a href="../../../index.php/UtilisateurController/affichUtil/'.$i.'">'.$util->nom.'</a><img class="img-responsive" src="../../img/'.$util->img.'"alt=""></li>';
+            $page = $page. '<li><a href="../affichUtil/'.$i.'">'.$util->nom.'</a><img class="img-responsive" src="../../img/user/'.$i.'.jpg."alt=""></li>';
             $i++;
         }
         return $page;
     }
     
+    
     public function descrUtil($id){
-        
+        $tab = Utilisateur::where('id', '=', $id)->first();
+        $page = $page. '<ul><li>id : '.$tab->id.'</li><li>nom : '.$tab->nom.'</li><li>mail :'.$tab->mail.'</li><li>message :'.$tab->message.'</li><li><img class="img-responsive" src="../../img/user/'.$id.'.jpg."alt=""></li>';
     }
     
-    public render($text){
-         $html = '<!DOCTYPE html>
+    
+    public function render($text){
+        $html = '<!DOCTYPE html>
 <!--[if IE 9]>
 <html class="ie ie9" lang="en-US">
 <![endif]-->
@@ -48,12 +52,12 @@ class UtilisateurVue {
 	<link href=\'http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,800\' rel=\'stylesheet\' type=\'text/css\'>
 	<link href=\'http://fonts.googleapis.com/css?family=Audiowide\' rel=\'stylesheet\' type=\'text/css\'>
 
-	<link rel="stylesheet" href="files/css/bootstrap.css">
-	<link rel="stylesheet" href="files/css/animate.css">
-	<link rel="stylesheet" href="files/css/simple-line-icons.css">
-	<link rel="stylesheet" href="files/css/font-awesome.min.css">
-	<link rel="stylesheet" href="files/css/style.css">
-	<link rel="stylesheet" href="files/rs-plugin/css/settings.css">
+	<link rel="stylesheet" href="src/appli/vue/files/css/bootstrap.css">
+	<link rel="stylesheet" href="src/appli/vue/files/css/animate.css">
+	<link rel="stylesheet" href="src/appli/vue/files/css/simple-line-icons.css">
+	<link rel="stylesheet" href="src/appli/vue/files/css/font-awesome.min.css">
+	<link rel="stylesheet" href="src/appli/vue/files/css/style.css">
+	<link rel="stylesheet" href="src/appli/vue/files/rs-plugin/css/settings.css">
     
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -83,28 +87,7 @@ class UtilisateurVue {
 							</div>
 							<nav class="main-navigation pull-right hidden-xs hidden-sm">
 								<ul>
-									<li><a href="index-2.html">Home</a></li>
-									<li><a href="#" class="has-submenu">Pages</a>
-										<ul class="sub-menu">
-											<li><a href="services.html">Services</a></li>
-											<li><a href="clients.html">Clients</a></li>
-										</ul>
-									</li>
-									<li><a href="#" class="has-submenu">Blog</a>
-										<ul class="sub-menu">
-											<li><a href="blog.html">Blog Classic</a></li>
-											<li><a href="blog-grid.html">Blog Grid</a></li>
-											<li><a href="blog-single.html">Single Post</a></li>
-										</ul>
-									</li>
-									<li><a href="about.html">About</a></li>
-									<li><a href="#" class="has-submenu">Work</a>
-										<ul class="sub-menu">
-											<li><a href="work-3columns.html">Three Columns</a></li>
-											<li><a href="work-4columns.html">Four Columns</a></li>
-											<li><a href="single-project.html">Single Project</a></li>
-										</ul>
-									</li>
+                                    '.$text.'
 									<li><a href="contact.html">Contact</a></li>
 								</ul>
 							</nav>
@@ -117,19 +100,19 @@ class UtilisateurVue {
 						<div class="fullwidthbanner">
 							<ul>
 								<li class="first-slide" data-transition="fade" data-slotamount="10" data-masterspeed="300">
-									<img src="files/images/01-slide.jpg" data-fullwidthcentering="on" alt="slide">
+									<img src="src/appli/vue/files/images/01-slide.jpg" data-fullwidthcentering="on" alt="slide">
 									<div class="tp-caption first-line lft tp-resizeme start" data-x="center" data-hoffset="0" data-y="250" data-speed="1000" data-start="200" data-easing="Power4.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0">YOM-DOWNLOAD ANYTHING</div>
 									<div class="tp-caption second-line lfb tp-resizeme start" data-x="center" data-hoffset="0" data-y="340" data-speed="1000" data-start="800" data-easing="Power4.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0">From Yom you can download anything for free</div>
 									<div class="tp-caption slider-btn sfb tp-resizeme start" data-x="center" data-hoffset="0" data-y="510" data-speed="1000" data-start="2200" data-easing="Power4.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0"><a href="#" class="btn btn-slider">Discover More</a></div>
 								</li>
 								<li class="first-slide" data-transition="fade" data-slotamount="10" data-masterspeed="300">
-									<img src="files/images/02-slide.jpg" data-fullwidthcentering="on" alt="slide">
+									<img src="src/appli/vue/files/images/02-slide.jpg" data-fullwidthcentering="on" alt="slide">
 									<div class="tp-caption first-line lft tp-resizeme start" data-x="center" data-hoffset="0" data-y="250" data-speed="1000" data-start="200" data-easing="Power4.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0">Create a Multi Author Blog</div>
 									<div class="tp-caption second-line lfb tp-resizeme start" data-x="center" data-hoffset="0" data-y="340" data-speed="1000" data-start="800" data-easing="Power4.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0">Using Yom you can create multi author Blog platform</div>
 									<div class="tp-caption slider-btn sfb tp-resizeme start" data-x="center" data-hoffset="0" data-y="510" data-speed="1000" data-start="2200" data-easing="Power4.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0"><a href="#" class=" second-btn btn btn-slider">Discover More</a></div>
 								</li>
 								<li class="first-slide" data-transition="fade" data-slotamount="10" data-masterspeed="300">
-									<img src="files/images/03-slide.jpg" data-fullwidthcentering="on" alt="slide">
+									<img src="src/appli/vue/files/images/03-slide.jpg" data-fullwidthcentering="on" alt="slide">
 									<div class="tp-caption first-line lft tp-resizeme start" data-x="center" data-hoffset="0" data-y="250" data-speed="1000" data-start="200" data-easing="Power4.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0">Create an E-commerce Site</div>
 									<div class="tp-caption second-line lfb tp-resizeme start" data-x="center" data-hoffset="0" data-y="340" data-speed="1000" data-start="800" data-easing="Power4.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0">Using Yom your can create a Multi Author E-Commerce Website</div>
 									<div class="tp-caption slider-btn sfb tp-resizeme start" data-x="center" data-hoffset="0" data-y="510" data-speed="1000" data-start="2200" data-easing="Power4.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0" data-endelementdelay="0"><a href="#" class="btn btn-slider">Discover More</a></div>
@@ -203,7 +186,7 @@ class UtilisateurVue {
 								<div id="owl-portfolio" class="owl-carousel owl-theme">
 									<div class="item">
 								  		<figure>
-				        					<img alt="portfolio" src="files/images/01-portfolio.jpg">
+				        					<img alt="portfolio" src="src/appli/vue/files/images/01-portfolio.jpg">
 				        					<figcaption>
 				            					<h3>Plaid Authentic</h3>
 				            					<p>Lorem ipsum dolor sit amet consectetur.</p>
@@ -212,7 +195,7 @@ class UtilisateurVue {
 				    				</div>
 								    <div class="item">
 								  		<figure>
-				        					<img alt="portfolio" src="files/images/02-portfolio.jpg">
+				        					<img alt="portfolio" src="src/appli/vue/files/images/02-portfolio.jpg">
 				        					<figcaption>
 				            					<h3>Portland Neutra</h3>
 				            					<p>Lorem ipsum dolor sit amet consectetur.</p>
@@ -221,7 +204,7 @@ class UtilisateurVue {
 				    				</div>
 								    <div class="item">
 								  		<figure>
-				        					<img alt="portfolio" src="files/images/03-portfolio.jpg">
+				        					<img alt="portfolio" src="src/appli/vue/files/images/03-portfolio.jpg">
 				        					<figcaption>
 				            					<h3>Synth Thundercats</h3>
 				            					<p>Lorem ipsum dolor sit amet consectetur.</p>
@@ -230,7 +213,7 @@ class UtilisateurVue {
 				    				</div>
 								    <div class="item">
 								  		<figure>
-				        					<img alt="portfolio" src="files/images/04-portfolio.jpg">
+				        					<img alt="portfolio" src="src/appli/vue/files/images/04-portfolio.jpg">
 				        					<figcaption>
 				            					<h3>Bushwick Letterpress</h3>
 				            					<p>Lorem ipsum dolor sit amet consectetur.</p>
@@ -239,7 +222,7 @@ class UtilisateurVue {
 				    				</div>
 				    				<div class="item">
 								  		<figure>
-				        					<img alt="portfolio" src="files/images/05-portfolio.jpg">
+				        					<img alt="portfolio" src="src/appli/vue/files/images/05-portfolio.jpg">
 				        					<figcaption>
 				            					<h3>Fashion Heirloom</h3>
 				            					<p>Lorem ipsum dolor sit amet consectetur.</p>
@@ -248,7 +231,7 @@ class UtilisateurVue {
 				    				</div>
 								    <div class="item">
 								  		<figure>
-				        					<img alt="portfolio" src="files/images/06-portfolio.jpg">
+				        					<img alt="portfolio" src="src/appli/vue/files/images/06-portfolio.jpg">
 				        					<figcaption>
 				            					<h3>Locavore Brooklyn</h3>
 				            					<p>Lorem ipsum dolor sit amet consectetur.</p>
@@ -257,7 +240,7 @@ class UtilisateurVue {
 				    				</div>
 				    				<div class="item">
 								  		<figure>
-				        					<img alt="portfolio" src="files/images/07-portfolio.jpg">
+				        					<img alt="portfolio" src="src/appli/vue/files/images/07-portfolio.jpg">
 				        					<figcaption>
 				            					<h3>Meggings Mixtape</h3>
 				            					<p>Lorem ipsum dolor sit amet consectetur.</p>
@@ -266,7 +249,7 @@ class UtilisateurVue {
 				    				</div>
 								    <div class="item">
 								  		<figure>
-				        					<img alt="portfolio" src="files/images/08-portfolio.jpg">
+				        					<img alt="portfolio" src="src/appli/vue/files/images/08-portfolio.jpg">
 				        					<figcaption>
 				            					<h3>Normcore Dreamcatcher</h3>
 				            					<p>Lorem ipsum dolor sit amet consectetur.</p>
@@ -372,7 +355,7 @@ class UtilisateurVue {
 						</div>
 						<div class="blog-item">
 							<div class="col-md-4">
-								<a href="blog-single.html"><img src="files/images/01-blog.jpg" alt=""></a>
+								<a href="blog-single.html"><img src="src/appli/vue/files/images/01-blog.jpg" alt=""></a>
 								<h3><a href="blog-single.html">Lorum Ipsum5</a></h3>
 								<span><a href="#">Syam Kesav</a> / <a href="#">6 June 2015</a> / <a href="#">Uncategorized</a></span>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit alis quam est leo, imperdiet eget dictum sed, congue non erosa senean sed ligula hendrerit...</p>
@@ -383,7 +366,7 @@ class UtilisateurVue {
 						</div>
 						<div class="blog-item">
 							<div class="col-md-4">
-								<a href="blog-single.html"><img src="files/images/02-blog.jpg" alt=""></a>
+								<a href="blog-single.html"><img src="src/appli/vue/files/images/02-blog.jpg" alt=""></a>
 								<h3><a href="blog-single.html">Lorum Ipsum5</a></h3>
 								<span><a href="#">Manohar Raj</a> / <a href="#">6 June 2015</a> / <a href="#">Uncategorized</a></span>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit alis quam est leo, imperdiet eget dictum sed, congue non erosa senean sed ligula hendrerit...</p>
@@ -394,7 +377,7 @@ class UtilisateurVue {
 						</div>
 						<div class="blog-item">
 							<div class="col-md-4">
-								<a href="blog-single.html"><img src="files/images/03-blog.jpg" alt=""></a>
+								<a href="blog-single.html"><img src="src/appli/vue/files/images/03-blog.jpg" alt=""></a>
 								<h3><a href="blog-single.html">Lorum Ipsum5</a></h3>
 								<span><a href="#">George Yeti</a> / <a href="#">6 June 2015</a> / <a href="#">Uncategorized</a></span>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit alis quam est leo, imperdiet eget dictum sed, congue non erosa senean sed ligula hendrerit...</p>
@@ -529,21 +512,19 @@ class UtilisateurVue {
 
 	
 
-	<script type="text/javascript" src="files/js/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="files/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="src/appli/vue/files/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="src/appli/vue/files/js/bootstrap.min.js"></script>
 	<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
-    <script src="files/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-    <script src="files/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="src/appli/vue/files/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+    <script src="src/appli/vue/files/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 
-	<script type="text/javascript" src="files/js/plugins.js"></script>
-	<script type="text/javascript" src="files/js/custom.js"></script>
+	<script type="text/javascript" src="src/appli/vue/files/js/plugins.js"></script>
+	<script type="text/javascript" src="src/appli/vue/files/js/custom.js"></script>
 
 </body>
 </html>';
 
         return $html;
         
-    }
-}
     }
 }

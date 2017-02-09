@@ -54,7 +54,7 @@ class IndexVue {
 							</div>
 							<nav class="main-navigation pull-right hidden-xs hidden-sm">
 								<ul>
-									<li><a href="index-2.html">Home</a></li>
+									<li><a href="index.php/UtilController/listeUtilisateur">Liste</a></li>
 									<li><a href="#" class="has-submenu">Pages</a>
 										<ul class="sub-menu">
 											<li><a href="services.html">Services</a></li>
