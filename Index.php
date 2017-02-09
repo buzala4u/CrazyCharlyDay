@@ -28,4 +28,4 @@ $slim->get('', function(){
     
 });
 
-slim->run();
+$slim->run();
