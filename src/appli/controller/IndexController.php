@@ -1,6 +1,7 @@
 <?php
 
 namespace appli\controller;
+
 use appli\vue\IndexVue as IndexVue;
 
 class IndexController {
