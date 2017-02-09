@@ -1,6 +1,6 @@
 <?php
 
-namespace Vue;
+namespace appli\vue;
 
 class Index {
     
