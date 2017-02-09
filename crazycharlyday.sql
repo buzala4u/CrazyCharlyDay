@@ -27,7 +27,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `groupe` (
-  `idGroupe` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
+  `idAdmin` int(11) NOT NULL,
   `valide` tinyint(1) NOT NULL,
   `idLogement` int(11) NOT NULL,
   `description` varchar(150) NOT NULL,
@@ -41,9 +42,10 @@ CREATE TABLE `groupe` (
 --
 
 CREATE TABLE `invitation` (
+  `URL` varchar(50) NOT NULL,
   `idGroupe` int(11) NOT NULL,
   `idUser` int(11) NOT NULL,
-  `URL` varchar(50) NOT NULL
+  `accepter` tinyint(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -53,9 +55,9 @@ CREATE TABLE `invitation` (
 --
 
 CREATE TABLE `logement` (
-  `idLogement` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `photo` varchar(50) NOT NULL,
-  `places` int(11) NOT NULL
+  `nbPlaces` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -146,22 +148,31 @@ INSERT INTO `user` (`idUser`, `nom`, `mail`, `message`, `photo`, `idGroupe`) VAL
 -- Index pour la table `groupe`
 --
 ALTER TABLE `groupe`
-  ADD PRIMARY KEY (`idGroupe`),
+  ADD CONSTRAINT fk_groupeUser FOREIGN KEY (`idAdmin`) REFERENCES `user`(`id`);
+ALTER TABLE `groupe`
+  ADD CONSTRAINT fk_groupeLogement FOREIGN KEY (`idLogement`) REFERENCES `Logement`(`id`);
+ADD PRIMARY KEY (`idGroupe`),
   ADD KEY `logid` (`idLogement`),
   ADD KEY `userid` (`idUser`);
+
 
 --
 -- Index pour la table `invitation`
 --
 ALTER TABLE `invitation`
+  ADD CONSTRAINT fk_invitationUser FOREIGN KEY (`idUser`) REFERENCES `user`(`id`);
+ALTER TABLE `invitation`
+  ADD CONSTRAINT fk_invitationGroupe FOREIGN KEY (`idGroupe`) REFERENCES `groupe`(`idGroupe`);
+ALTER TABLE `invitation`
   ADD PRIMARY KEY (`idGroupe`,`idUser`),
   ADD KEY `userid2` (`idUser`);
+>>>>>>> d81ad5c1e68f4241af1f4c731a7d615466ba934c
 
 --
 -- Index pour la table `logement`
 --
 ALTER TABLE `logement`
-  ADD PRIMARY KEY (`idLogement`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `user`
