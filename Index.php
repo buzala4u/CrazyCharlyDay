@@ -19,13 +19,13 @@ $db->bootEloquent();
 $slim = new \Slim\Slim();
 
 $slim->get('/', function(){
-    $c = new Index();
-    $html = $c->affichage();
+    $c = new IndexController();
+    $html = $c->affichIndex();
     echo $html;
 });
 
 $slim->get('', function(){
-
+    
 });
 
 slim->run();
